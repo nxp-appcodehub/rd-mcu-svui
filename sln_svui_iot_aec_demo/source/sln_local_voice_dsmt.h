@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2023 NXP.
+ * Copyright 2021-2023, 2025 NXP.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -17,7 +17,7 @@
 extern "C" {
 #endif
 
-#define NUM_GROUPS        (NUM_CMD_GROUPS + 3)      // groups: base, ww, cmd_iot, cmd_elevator, and so on
+#define NUM_GROUPS        (NUM_CMD_GROUPS + 2)      // groups: base, ww, cmd_iot, cmd_elevator, and so on
 #define NUM_INFERENCES_WW (NUM_LANGUAGES)           // WW in multiple languages
 
 // ASR events

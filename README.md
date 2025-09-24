@@ -22,9 +22,9 @@ This NXP EdgeReady solution for both local and online voice control leverages th
 
 ## 1. Software<a name="step1"></a>
 
-- MCUXpresso 11.10.0
+- MCUXpresso 25.06.x
 - MCUXpresso RT1060 EVKC 2.16.0 SDK
-- Cyberon Dspotter Modeling Tool V2 (last tested version is 2.2.19.1)
+- Cyberon Dspotter Modeling Tool V2 (last tested version is 2.2.22.2)
 - Serial connection software (Putty, Tera Term, MobaXterm, etc.)
 
 ## 2. Hardware<a name="step2"></a>
@@ -106,11 +106,11 @@ Install SDK in IDE
 
 ### 3.4 Step 4 (Optional, only if DSMT is used)
 
-Download Cyberon DSpotter Modeling Tool v2, version 2.2.19.1
+Download Cyberon DSpotter Modeling Tool v2, version 2.2.22.2
 
 - Go to this URL: [https://tool.cyberon.com.tw/DSMT_V2/index.php?lang=en](https://tool.cyberon.com.tw/DSMT_V2/index.php?lang=en)
 - Scroll down until you reach "Download" section
-- Click and download v2.2.19.1
+- Click and download v2.2.22.2
 
 ### 3.5 Step 5
 
@@ -459,9 +459,10 @@ Questions regarding the content/correctness of this example can be entered as Is
 [![Follow us on Twitter](https://img.shields.io/badge/X-Follow%20us%20on%20X-black.svg)](https://x.com/NXP)
 
 ## 7. Release Notes<a name="step7"></a>
-| Version | Description / Update                           | Date                        |
-|:-------:|------------------------------------------------|----------------------------:|
-| 1.0     | Initial release on Application Code Hub        | October 30<sup>th</sup> 2024 |
+| Version | Description / Update                           | Date                           |
+|:-------:|------------------------------------------------|-------------------------------:|
+| 2.0     | Update DSMT models and detection engine        | September 26<sup>th</sup> 2025 |
+| 1.0     | Initial release on Application Code Hub        | October 30<sup>th</sup> 2024   |
 
 
 ## 8. Known issues<a name="step8"></a>

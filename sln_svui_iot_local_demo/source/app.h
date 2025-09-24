@@ -1,12 +1,12 @@
 /*
- * Copyright 2023-2024 NXP.
+ * Copyright 2023-2025 NXP.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
 /* Application version */
 #define APP_MAJ_VER                    0x02
-#define APP_MIN_VER                    0x00
+#define APP_MIN_VER                    0x01
 #define APP_BLD_VER                    0x0000
 
 /* Define this to 1 when building for reference design (16 MB flash)

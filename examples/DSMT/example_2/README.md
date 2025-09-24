@@ -74,10 +74,6 @@ This can be done either by double clicking on the inserted command or by clickin
 
 ## Generating the voice model binary
 
-- Check the MapID box. It generates test_demo_pack_WithMapID.bin, which is what we will use for integration in the firmware
-
-<img src="../../../docs/image-127.png" width="200">
-
 - Save the project (Ctrl + S or File -> Save project)
 - The test_demo folder should look as shown below
 
@@ -249,7 +245,7 @@ This can be done either by double clicking on the inserted command or by clickin
     .global es_model_begin
 
     es_model_begin:
-    .incbin "./es/test_demo/test_demo_pack_WithMapID.bin"
+    .incbin "./es/test_demo/test_demo_pack.bin"
     es_model_end:
     ```
 
@@ -295,7 +291,7 @@ The binary version definitions are found in **_source/app.h_**.
 ```c
 /* Application version */
 #define APP_MAJ_VER                    0x02
-#define APP_MIN_VER                    0x00
+#define APP_MIN_VER                    0x01
 #define APP_BLD_VER                    0x0003
 ```
 
@@ -303,7 +299,7 @@ The binary version definitions are found in **_source/app.h_**.
 
 - Project compilation should now be successful
 - Generate the binary and use it for an MSD update
-- Command `version` should print 2.0.3
+- In the shell, type `version` and check that the output is the expected one
 - Command `help` should display "es" language as available to change to
 - Change to es by using command `changelang es`
 - Command `commands` should list the newly added commands

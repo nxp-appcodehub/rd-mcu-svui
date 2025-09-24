@@ -32,7 +32,7 @@ The patch ex0_dsmt.patch [can be applied](../../../README.md#applying-patches) t
 
 <img src="../../../docs/image-136.png" width="450">
 
-- If you do not have an account, email local-commands@nxp.com with the following information:
+- If you do not have an account, email voice@nxp.com with the following information:
     - Name
     - Email
     - Company
@@ -160,7 +160,7 @@ The binary version definitions are found in **_source/app.h_**.
 ```c
 /* Application version */
 #define APP_MAJ_VER                    0x02
-#define APP_MIN_VER                    0x00
+#define APP_MIN_VER                    0x01
 #define APP_BLD_VER                    0x0001
 ```
 

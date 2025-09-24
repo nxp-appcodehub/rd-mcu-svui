@@ -1,5 +1,5 @@
 /*
- * Copyright 2022-2024 NXP.
+ * Copyright 2022-2025 NXP.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -30,6 +30,12 @@
 
 #ifndef MICS_TYPE
 #define MICS_TYPE MICS_I2S
+#endif /* MICS_TYPE */
+
+#if (MICS_TYPE == MICS_PDM)
+#include "pdm_to_pcm_task.h"
+#elif (MICS_TYPE == MICS_I2S)
+#include "sln_i2s_mic.h"
 #endif /* MICS_TYPE */
 
 /*******************************************************************************
@@ -212,22 +218,6 @@ typedef struct _sai_mic_config
     uint32_t saiCaptureCount;
     sai_clock_polarity_t micClockPolarity;
 } sai_mic_config_t;
-
-typedef struct _mic_task_config
-{
-    TaskHandle_t *thisTask;
-    TaskHandle_t *processingTask;
-#if ENABLE_AEC
-    void (*feedbackEnable)(void);
-    void (*feedbackDisable)(void);
-#if USE_MQS
-    ringbuf_t *loopbackRingBuffer;
-    SemaphoreHandle_t loopbackMutex;
-    void (*updateTimestamp)(uint32_t);
-    uint32_t (*getTimestamp)(void);
-#endif /* USE_MQS */
-#endif /* ENABLE_AEC */
-} mic_task_config_t;
 
 typedef struct _sln_mic_handle
 {

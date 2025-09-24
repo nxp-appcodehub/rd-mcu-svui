@@ -27,7 +27,7 @@ The patch ex1_dsmt.patch [can be applied](../../../README.md#applying-patches) t
 
 <img src="../../../docs/image-136.png" width="450">
 
-- If you do not have an account, email local-commands@nxp.com with the following information:
+- If you do not have an account, email voice@nxp.com with the following information:
     - Name
     - Email
     - Company
@@ -85,10 +85,6 @@ That is because some words are pronounced slightly different in different region
 
 ## Generating the voice model binary
 
-- Check the MapID box. It generates test_demo_pack_WithMapID.bin, which is what we will use for integration in the firmware
-
-<img src="../../../docs/image-27.png" width="200">
-
 - Save the project (Ctrl + S or File -> Save project)
 - The test_demo folder should look as shown below
 
@@ -97,7 +93,7 @@ That is because some words are pronounced slightly different in different region
 ## Integrating the model in sln_svui_iot_local_demo
 
 1. To clean up the **_local_voice/DSMT_** folder, delete folders for other languages: cn, de, fr, hi, nl, th, vn.\
-    Previous model binary and .dsmt file can be deleted
+    Previous model binary and .dsmt file can be deleted (**oob_demo_en_pack.bin** and **oob_demo_en_pack.dsmt**)
 
 <img src="../../../docs/image-29.png">
 
@@ -334,7 +330,7 @@ That is because some words are pronounced slightly different in different region
     .global en_model_begin
 
     en_model_begin:
-    .incbin "./en/test_demo/test_demo_pack_WithMapID.bin"
+    .incbin "./en/test_demo/test_demo_pack.bin"
     en_model_end:
     ```
 
@@ -364,7 +360,7 @@ The binary version definitions are found in **_source/app.h_**.
 ```c
 /* Application version */
 #define APP_MAJ_VER 0x02
-#define APP_MIN_VER 0x00
+#define APP_MIN_VER 0x01
 #define APP_BLD_VER 0x0002
 ```
 
@@ -373,7 +369,7 @@ The binary version definitions are found in **_source/app.h_**.
 Project compilation should now be successful.
 
 - Generate the binary and use it for an MSD update
-- Command `version` should print 2.0.2
+- In the shell, type `version` and check that the output is the expected one
 - Command `commands` should list the newly added commands
 - Say the wake word followed by one of the commands to test the detection
 

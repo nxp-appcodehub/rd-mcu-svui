@@ -1,5 +1,5 @@
 /*
- * Copyright 2021-2024 NXP.
+ * Copyright 2021-2025 NXP.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -163,14 +163,6 @@ int32_t install_language(asr_control_t *pAsrCtrl,
             nGroups) // unpack group addresses from model binary
         {
             configPRINTF(("Invalid bin. Error Code: %d.\r\n", status));
-        }
-        else
-        {
-            if ((status = unpackBin(pLangModel->addrGroup[nGroups - 1], pLangModel->addrGroupMapID, nGroupsMapID)) <
-                (nGroupsMapID)) // unpack group addresses from mapID binary
-            {
-                configPRINTF(("Invalid bin. Error Code: %d.\r\n", status));
-            }
         }
     }
     else
@@ -386,11 +378,6 @@ void set_inference_handler(struct asr_inference_engine *p)
         {
             vTaskDelay(1000);
         }
-    }
-
-    if ((status = SLN_ASR_LOCAL_Set_CmdMapID(p->handler, &p->addrGroupMapID, 1)) != kAsrLocalSuccess)
-    {
-        configPRINT_STRING("Fail to set map id! - %d\r\n", status);
     }
 }
 

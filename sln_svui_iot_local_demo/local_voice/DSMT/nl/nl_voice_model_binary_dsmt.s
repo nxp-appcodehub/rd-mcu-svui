@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 NXP
+ * Copyright 2024, 2025 NXP
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -10,5 +10,5 @@
 .global nl_model_begin
 
 nl_model_begin:
-.incbin "./nl/oob_demo_nl_pack_WithMapID.bin"
+.incbin "./nl/oob_demo_nl_pack.bin"
 nl_model_end:

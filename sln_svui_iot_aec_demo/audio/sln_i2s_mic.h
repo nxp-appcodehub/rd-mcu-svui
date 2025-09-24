@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 NXP.
+ * Copyright 2022, 2025 NXP.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -13,6 +13,29 @@
 
 #include "stdbool.h"
 #include "stdint.h"
+
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
+typedef struct _mic_task_config
+{
+    TaskHandle_t *thisTask;
+    TaskHandle_t *processingTask;
+#if ENABLE_AEC
+    void (*feedbackEnable)(void);
+    void (*feedbackDisable)(void);
+#if USE_MQS
+    ringbuf_t *loopbackRingBuffer;
+    SemaphoreHandle_t loopbackMutex;
+    void (*updateTimestamp)(uint32_t);
+    uint32_t (*getTimestamp)(void);
+#endif /* USE_MQS */
+#endif /* ENABLE_AEC */
+} mic_task_config_t;
+
+/*******************************************************************************
+ * API
+ ******************************************************************************/
 
 /**
  * @brief Return the pointer to the buffer containing PCM mic data.

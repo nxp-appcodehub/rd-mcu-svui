@@ -90,7 +90,6 @@ The purpose of this example is to tune an English DSMT model.
 
 <img src="../../../docs/image-71.png">
 
-- Check MapID box - this will generate the new **oob_demo_en_pack_WithMapID.bin**
 - Save the project
 
 ## Manually adding garbage words
@@ -109,6 +108,6 @@ The purpose of this example is to tune an English DSMT model.
 
 ## Integrating the new model
 
-- Overwrite **oob_demo_en_pack_WithMapID.bin** from your MCUXpresso project
+- Overwrite **oob_demo_en_pack.bin** from your MCUXpresso project
 - Clean and build the project
 - Use the new binary for [MSD](../../../README.md#msd-update)

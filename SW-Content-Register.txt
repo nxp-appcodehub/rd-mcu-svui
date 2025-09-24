@@ -1,6 +1,6 @@
 Package: rd-mcu-svui
-Version: RELEASE_2.15_SLN_SVUI_IOT_ACH_R1
-Outgoing License: LA_OPT_Online Code Hosting NXP_Software_License - v1.2 October 2023 
+Version: RELEASE_2.15_SLN_SVUI_IOT_ACH_R2
+Outgoing License: LA_OPT_Online Code Hosting NXP_Software_License - v1.4 May 2025
 License file: LICENSE.txt
 Type of content: source code
 Description and comments: i.MX RT106V/C Based Smart Voice User Interface Solution
@@ -178,7 +178,7 @@ VIT_CM7_v06_03_01          Name: VIT CM7
                            Origin: NXP (BSD-3-Clause)
 
 Cyberon DSMT wrapper       Name: lib_sln_asr.h - wrapper header for Cyberon DSMT lib
-headers                    Version of Cyberon DSMT lib: 2.2.18.0
+headers                    Version of Cyberon DSMT lib: 2.2.22.2
                            Outgoing License: BSD-3-Clause
                            License File: COPYING-BSD-3
                            Format: Header file

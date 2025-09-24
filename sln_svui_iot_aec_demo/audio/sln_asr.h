@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2023 NXP.
+ * Copyright 2020-2023, 2025 NXP.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -76,19 +76,6 @@ HANDLE SLN_ASR_LOCAL_Init(uint8_t *addrBase,
                         uint8_t *memPool,
                         int32_t memSize,
                         int32_t *status);
-
-/**
- * @brief Sets the maps IDs for the commands
- *
- * @param handler    A handle of the recognizer
- * @param addrGroup  The keyword group, a group of either wake word(s) or commands
- * @param nGroups    The number of groups
-
- * @return int32_t  The status of the execution (sln_asr_local_states_t)
- */
-int32_t SLN_ASR_LOCAL_Set_CmdMapID(HANDLE handler,
-                                unsigned char **addrGroup,
-                                signed int nGroups);
 
 /**
  * @brief Transfer voice samples to the recognizer for recognizing and if recognized it gives the id of the command
